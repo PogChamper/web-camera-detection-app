@@ -17,7 +17,4 @@ pyreadline3==3.5.4
 PyYAML==6.0.2
 setuptools==70.0.0
 sympy==1.12
-torch==2.4.1
-torchaudio==2.4.1
-torchvision==0.19.1
 typing_extensions==4.9.0

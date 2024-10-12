@@ -2,9 +2,10 @@ classes: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 
 fps: 30
 height: 1080
 width: 1920
-source: 0 #"http://host.docker.internal:56000/mjpeg"
+source: "http://host.docker.internal:56000/mjpeg" #0
 conf_threshold: 0.5
 nms_threshold: 0.75
+model_name: "yolo11s.onnx"
 colors: [[0, 255, 0], [255, 0, 0], [0, 0, 255], [255, 255, 0], [0, 255, 255], [255, 0, 255], [192, 192, 192], [128, 0, 0], [0, 128, 0], [0, 0, 128]]
 class_names: [
     'person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light',
@@ -17,3 +18,4 @@ class_names: [
     'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear',
     'hair drier', 'toothbrush'
 ]
+output_directory: "output"

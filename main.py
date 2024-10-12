@@ -11,7 +11,7 @@ from config import config
 stop_flag = threading.Event()
 
 def display_thread(frame_queue: queue.Queue) -> None:
-    cv2.namedWindow("YOLO Detections", cv2.WINDOW_NORMAL)
+    cv2.namedWindow("YOLO Detections", cv2.WINDOW_AUTOSIZE)
     while not stop_flag.is_set():
         try:
             frame: Optional[cv2.Mat] = frame_queue.get(timeout=1)

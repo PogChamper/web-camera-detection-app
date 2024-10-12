@@ -1,4 +1,5 @@
 import yaml
+import os
 
 from dataclasses import dataclass, field, asdict
 from typing import List, Tuple, Dict, Union
@@ -10,10 +11,12 @@ class Config:
     height: int = 1080
     width: int = 1920
     source: Union[int, str] = 0  # Can be int for USB camera or str for IP camera URL
+    model_name: str = "yolo11s.onnx"
     conf_threshold: float = 0.25
     nms_threshold: float = 0.75
     colors: List[Tuple[int, int, int]] = field(default_factory=list)
     class_names: List[str] = field(default_factory=list)
+    output_directory: str = "output"
 
     def to_dict(self) -> Dict:
         return asdict(self)
