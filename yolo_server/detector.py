@@ -3,13 +3,13 @@ import numpy as np
 import time
 from typing import List, Tuple
 
-from yolo_server.yolo import YOLOv10
+from yolo_server.yolo import YOLOv11
 from config import Config
 
 class Detector:
     def __init__(self, config: Config):
         self.config = config
-        self.yolo = YOLOv10(config=self.config)
+        self.yolo = YOLOv11(config=self.config)
         self.prev_frame_time = 0
         self.current_frame_time = 0
 

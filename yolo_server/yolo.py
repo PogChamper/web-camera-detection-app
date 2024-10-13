@@ -130,7 +130,7 @@ def non_max_suppression(
     return output
 
 
-class YOLOv10:
+class YOLOv11:
     def __init__(self, config: Config):
         self.model_name: str = config.model_name
         self.inference: ONNXInference = ONNXInference(self.model_name)
