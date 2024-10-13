@@ -16,6 +16,8 @@ class ONNXInference:
             model_path: str = str(PureWindowsPath(path))
         elif platform.system() == 'Linux':
             model_path: str = path
+        else:
+            model_path: str = path
 
         self.session: ort.InferenceSession = ort.InferenceSession(model_path, providers=["CPUExecutionProvider"])
         self.model_inputs: List[ort.NodeArg] = self.session.get_inputs()
