@@ -132,7 +132,7 @@ def non_max_suppression(
 
 class YOLOv10:
     def __init__(self, config: Config):
-        self.model_name: str = 'yolo11s.onnx'
+        self.model_name: str = config.model_name
         self.inference: ONNXInference = ONNXInference(self.model_name)
         self.max_batch_size: int = 1
         self.model_inputs: Tuple[int, int, int] = self.inference.get_inputs()

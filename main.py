@@ -1,4 +1,5 @@
 import cv2
+import platform
 import threading
 import queue
 from typing import Optional
@@ -10,8 +11,15 @@ from config import config
 # Global flag to signal all threads to stop
 stop_flag = threading.Event()
 
+
 def display_thread(frame_queue: queue.Queue) -> None:
-    cv2.namedWindow("YOLO Detections", cv2.WINDOW_AUTOSIZE)
+    if platform.system() == 'Windows':
+        cv2.namedWindow("YOLO Detections", cv2.WINDOW_AUTOSIZE)
+    elif platform.system() == 'Linux':
+        cv2.namedWindow("YOLO Detections", cv2.WINDOW_NORMAL)
+    else:
+        cv2.namedWindow("YOLO Detections", cv2.WINDOW_AUTOSIZE)
+
     while not stop_flag.is_set():
         try:
             frame: Optional[cv2.Mat] = frame_queue.get(timeout=1)
@@ -24,6 +32,7 @@ def display_thread(frame_queue: queue.Queue) -> None:
         except queue.Empty:
             continue
     cv2.destroyAllWindows()
+
 
 def main() -> None:
     # Initialize the detector
