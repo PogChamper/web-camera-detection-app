@@ -21,18 +21,20 @@
 
 ###  Windows locally run without Docker:
 1. ```python -m venv yolo-detection-app-venv```
-2. ```.\yolo-detection-app-venv\Scripts\activate.bat``` in **CMD** or  ```source ./yolo-detection-app-venv/Scripts/activate``` in **git bash for Windows**
-3. ```git clone https://github.com/PogChamper/web-camera-detection-app.git```
-4. ```cd web-camera-detection-app```
-5. Change in ```config.yaml``` **source** field to ```0```
-6. ```pip install -r requirements.txt```
-7. ```python main.py```
+2. ```pip install --upgrade pip```
+3. ```.\yolo-detection-app-venv\Scripts\activate.bat``` in **CMD** or  ```source ./yolo-detection-app-venv/Scripts/activate``` in **git bash for Windows**
+4. ```git clone https://github.com/PogChamper/web-camera-detection-app.git```
+5. ```cd web-camera-detection-app```
+6. Change in ```config.yaml``` **source** field to ```0```
+7. ```pip install -r requirements.txt```
+8. ```python main.py```
 
 ###  Linux locally run without Docker:
 1. ```python -m venv yolo-detection-app-venv```
-2. ```source yolo-detection-app-venv/bin/activate```
-3. ```git clone https://github.com/PogChamper/web-camera-detection-app.git```
-4. ```cd web-camera-detection-app```
-5. Change in ```config.yaml``` **source** field to ```0```
-6. ```pip install -r requirements.txt```
-7. ```python main.py```
+2. ```pip install --upgrade pip```
+3. ```source yolo-detection-app-venv/bin/activate```
+4. ```git clone https://github.com/PogChamper/web-camera-detection-app.git```
+5. ```cd web-camera-detection-app```
+6. Change in ```config.yaml``` **source** field to ```0```
+7. ```pip install -r requirements.txt```
+8. ```python main.py```
