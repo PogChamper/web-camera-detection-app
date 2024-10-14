@@ -21,7 +21,7 @@
 
 ###  Windows locally run without Docker:
 1. ```python -m venv yolo-detection-app-venv```
-2. ```.\yolo-detection-app-venv\Scripts\activate.bat``` in **CMD** or  ```source./yolo-detection-app-venv/Scripts/activate``` in **git bash for Windows**
+2. ```.\yolo-detection-app-venv\Scripts\activate.bat``` in **CMD** or  ```source ./yolo-detection-app-venv/Scripts/activate``` in **git bash for Windows**
 3. ```git clone https://github.com/PogChamper/web-camera-detection-app.git```
 4. ```cd web-camera-detection-app```
 5. Change in ```config.yaml``` **source** field to ```0```
