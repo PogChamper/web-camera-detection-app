@@ -38,3 +38,13 @@
 6. Change in ```config.yaml``` **source** field to ```0```
 7. ```pip install -r requirements.txt```
 8. ```python main.py```
+
+###  MacOS (only locally run without Docker):
+1. ```python -m venv yolo-detection-app-venv```
+2. ```pip install --upgrade pip```
+3. ```source yolo-detection-app-venv/bin/activate```
+4. ```git clone https://github.com/PogChamper/web-camera-detection-app.git```
+5. ```cd web-camera-detection-app```
+6. Change in ```config.yaml``` **source** field to ```0```
+7. ```pip install -r requirements.txt```
+8. ```python main.py```
