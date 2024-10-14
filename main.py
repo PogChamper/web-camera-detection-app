@@ -18,7 +18,7 @@ def display_thread(frame_queue: queue.Queue) -> None:
     elif platform.system() == 'Linux':
         cv2.namedWindow("YOLO Detections", cv2.WINDOW_NORMAL)
     else:
-        cv2.namedWindow("YOLO Detections", cv2.WINDOW_AUTOSIZE)
+        cv2.namedWindow("YOLO Detections", cv2.WINDOW_NORMAL)
 
     while not stop_flag.is_set():
         try:
